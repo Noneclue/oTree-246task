@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+  2-4-6課題
+{% endblock %}
+
+{% block content %}
+  <p>3つの数字の規則をお答えください</p>
+
+    {% formfield player.answer %}
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    {{ subsession.round_number }}回目の質問
+{% endblock %}
+
+{% block content %}
+
+    <p>
+      3つの数字を選んでください。
+    </p>
+      {% formfield player.first_num %}
+      {% formfield player.second_num %}
+      {% formfield player.third_num %}
+      {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+
+{% load otree_tags staticfiles %}
+
+{% block title %}
+  2-4-6課題
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+  <h3 class="panel-sub-heading">
+    Instruction
+  </h3>
+<p>
+  3つの整数に関する規則性を推測する実験です。
+</p>
+<p>
+  「2-4-6」という組み合わせは、ある規則に合致しています。<br>
+  任意の整数列がその規則に合っているかどうかについてお答えします。(最大{{ Constants.num_rounds }}回)<br>
+  質問の後、正しいと思う規則性を答えてください。
+</p>
+</div>
+
+{% next_button %}
+
+{% endblock %}

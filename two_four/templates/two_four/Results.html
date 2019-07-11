@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    2-4-6課題
+{% endblock %}
+
+{% block content %}
+    <p>
+      あなたの選択した整数列は{{player.first_num}}-{{player.second_num}}-{{player.third_num}}です。<BR>
+      <b>{{player.truefalse}}</b>
+    </p>
+
+    {% if not subsession.round_number == Constants.num_rounds %}
+        <p>
+          質問を続けますか？（「いいえ」を選ぶと最終回答に移ります）
+        </p>
+        <div>
+          <button name="quit_loop" value=False class="btn btn-primary btn-lager">はい</button>
+          <button name="quit_loop" value=True class="btn btn-primary btn-lager">いいえ</button>
+        </div>
+    {% else %}
+        <button name="quit_loop" value=False class="btn btn-primary btn-lager">最終回答へ進む</button>
+    {% endif %}
+
+{{ form.quit_loop.errors }}
+
+{% endblock %}
